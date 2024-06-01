@@ -5,6 +5,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Additional CSS for centering the image */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .downsized-image {
+            display: block;
+            margin: 0 auto;
+            width: 40%; /* Adjust the width as needed */
+            max-width: 600px; /* Set the max-width */
+        }
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; /* Adjust the gap as needed */
+        }
+        .video-container video {
+            flex: 1 1 48%; /* Adjust the width as needed */
+            max-width: 48%; /* Set the max-width */
+            width: 100%; /* Ensure the video takes the full width of its container */
+        }
+        .downsized-video {
+            width: 40%; /* Adjust the width as needed */
+            max-width: 500px; /* Set the max-width */
+        }
+    </style>
 </head>
 <body>
     <div id="page-wrapper">
@@ -19,9 +47,17 @@
                 <h2>Project 4</h2>
                 <p>Automate a box folding process using an omron robot.</p>
             </header>
-            <section>
+            <!-- Video 1 -->
+            <div class="image-container">
+                <video controls class="downsized-image">
+                    <source src="videos/foldingbox.MOV" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+                <p>Box folding procedures</p>
+            
                 <p>Insert your detailed content here...</p>
-            </section>
+        
         </article>
 
         <!-- Footer -->
