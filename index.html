@@ -1,172 +1,191 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Massively by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <style>
-            /* Additional CSS for centering the image */
-            .image-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .downsized-image {
-				display: block;
-				margin: 0 auto;
-                width: 40%; /* Adjust the width as needed */
-                max-width: 300px; /* Set the max-width */
-            }
-        </style>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Additional CSS for centering the image */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .downsized-image {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Adjust the width as needed */
+            max-width: 300px; /* Set the max-width */
+        }
+        /* CSS for two side-by-side posts */
+        .post-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Adjust the gap as needed */
+            justify-content: space-between;
+        }
+        .post-grid .post {
+            flex: 1 1 calc(50% - 20px); /* Two posts per row with space in between */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center; /* Center align text */
+            margin-bottom: 20px; /* Space between rows */
+            box-sizing: border-box;
+            border-bottom: 1px solid #ccc; /* Add a border to the bottom of each post */
+            padding-bottom: 20px; /* Add some padding at the bottom for spacing */
+        }
+        .post-grid .post header, .post-grid .post .content, .post-grid .post .actions {
+            flex: 0 1 auto;
+        }
+        .post-grid .post .content {
+            flex: 1 1 auto; /* Make content take up the remaining space */
+        }
+        .post-grid .post .actions {
+            margin-top: 20px;
+        }
+        .post-grid .post .image-container {
+            flex: 0 1 auto;
+        }
+    </style>
+</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro -->
+        <div id="intro">
+            <h1>Roger's<br />ePortfolio</h1>
+            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+        </div>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Roger's<br />
-						ePortfolio</h1>
-						<!-- <p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
-						and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p>
-						<ul class="actions"> -->
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Projects</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">HOME</a></li>
+                <li><a href="full-story.html">Allocates</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://sg.linkedin.com/in/1985-roger-ng?original_referer=https%3A%2F%2Fwww.google.com%2F" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/5603roger" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <!-- Featured Post -->
+            <article class="post featured">
+                <header class="major">
+                    <span class="date"></span>
+                    <h2><a href="#">Robotics Systems Engineering Student<br /></a></h2>
+                </header>
+                <div class="image-container">
+                    <img src="images/IMG_0091.jpeg" alt="" class="downsized-image" />
+                </div>
+                <ul class="actions special">
+                    <p>Firm believer of overcoming self-restrictions and breaking limits, constantly seeking new profound skills and knowledge</p>
+                </ul>
+            </article>
+
+            <!-- Projects Header -->
+            <header class="major"></header>
+
+            <!-- Posts -->
+            <section class="posts post-grid">
+				
+				<article class="post">
+					<header>
+						<h3><a href="#">Project 1 & 2</a></h3>
+					</header>
+					<div class="image-container">
+						<img src="images/IMG_0531.jpeg" alt="" class="downsized-image"/>
 					</div>
+					<div class="content">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Projects</a>
+
+					</div>
+					<footer>
+						<p>Combining Robotics fundamentals to create a functional robot</p>
+						<ul class="actions special">
+							<li><a href="full-story2.html" class="button">Full Story</a></li>
+						</ul>
+					</footer>
+				</article>
+				
+				<article class="post">
+					<header>
+						<h3><a href="#">Project 3</a></h3>
+					</header>
+					<div class="image-container">
+						<img src="images/turtlebot3_series.png" alt="" class="downsized-image" />
+					</div>
+					<div class="content">
+
+
+					</div>
+					<footer>
+						<p>Application of ROS to create a digital maze solver</p>
+						<ul class="actions special">
+							<li><a href="full-story3.html" class="button">Full Story</a></li>
+						</ul>
+					</footer>
+				</article>
+				
+				<article class="post">
+					<header>
+						<h3><a href="#">Project 4</a></h3>
 					</header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">HOME</a></li>
-							<li><a href="full-story.html">Allocates</a></li>
+					<div class="image-container">
+						<img src="images/omron.jpg" alt="" class="downsized-image" />
+					</div>
+					<div class="content">
+
+					</div>
+					<footer>
+						<p>Automate a box folding process using an omron robot.</p>
+						<ul class="actions special">
+							<li><a href="full-story4.html" class="button">Full Story</a></li>
 						</ul>
-						<ul class="icons">
-							<li><a href="https://sg.linkedin.com/in/1985-roger-ng?original_referer=https%3A%2F%2Fwww.google.com%2F" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/5603roger" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</footer>
+				</article>
+				
+				<article class="post">
+					<header>
+						<h3><a href="#">Systems Engineering Project 1</a></h3>
+					</header>
+					<div class="image-container">
+						<img src="images/limo.jpeg" alt="" class="downsized-image" />
+					</div>
+					<div class="content">
+
+
+					</div>
+					<footer>
+						<p>Porting over application of ROS onto a LIMO robot to navigate around a physical plane</p>
+						<ul class="actions special">
+							<li><a href="full-story5.html" class="button">Full Story</a></li>
 						</ul>
-					</nav>
+					</footer>
+				</article>
+				
+				
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date"></span>
-									<h2><a href="#">Robotics Systems Engineering Student<br />
-									</a></h2>
-									<p</p>
-								</header>
-								<a href="#" class="image main"><img src="images/IMG_0091.jpeg" alt="" class="downsized-image" /></a>
-								<ul class="actions special">
-								<p>Firm beliver of overcoming self-restrictions and breaking limits, constantly seeking for new profound skills and knowledge</p>
-								</ul>
-							</article>
-						<!-- Projects Header -->
-							<header class="major">
-
-
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-
-										<h3><a href="#">Project 1 & 2<br />
-										
-									</header>
-									
-									<a href="#" class="image fit"><img src="images/IMG_0531.jpeg" alt="" class="downsized-image"/></a>
-									<p>Combining Robotics fundamentals to create a functional robot</p>
-									<ul class="actions special">
-										<li><a href="full-story2.html" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-
-										<h3><a href="#">Project 3<br />
-										
-									</header>
-									<a href="#" class="image fit"><img src="images/turtlebot3_series.png" alt="" class="downsized-image" /></a>
-									<p> </p>
-									<p>Application of ROS to create a digital maze solver</p>
-									<ul class="actions special">
-										<li><a href="full-story3.html" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-
-										<h3><a href="#">Project 4<br />
-
-									</header>
-									<a href="#" class="image fit"><img src="images/omron.jpg" alt="" class="downsized-image" /></a>
-									<p>Automate a box folding process using an omron robot.</p>
-									<ul class="actions special">
-										<li><a href="full-story4.html" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-
-										<h3><a href="#">Systems Engineering Project 1<br />
-
-									</header>
-									<a href="#" class="image fit"><img src="images/limo.jpeg" alt="" class="downsized-image"/></a>
-									<p>Porting over application of ROS onto a LIMO robot to navigate around a physical plane </p>
-									<ul class="actions special">
-										<li><a href="full-story5.html" class="button">Full Story</a></li>
-									</ul>
-								</article>
-						<!--
-								<article>
-									<header>
-										<span class="date">April 11, 2017</span>
-										<h2><a href="#">Odio magna<br />
-										sed consectetur</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 7, 2017</span>
-										<h2><a href="#">Augue lorem<br />
-										primis vestibulum</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section>
-						-->
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-		
-	</body>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </div>
+</body>
 </html>
