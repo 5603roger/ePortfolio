@@ -49,6 +49,14 @@
         .post-grid .post .image-container {
             flex: 0 1 auto;
         }
+        /* CSS for the Projects header */
+        header#projects-header {
+        text-align: center; /* Center align text */
+        margin-bottom: 20px; /* Add some bottom margin for spacing */
+        }
+        header#projects-header h3 {
+            font-weight: bold; /* Make the text bold */
+        }
     </style>
 </head>
 
@@ -57,14 +65,11 @@
     <div id="wrapper" class="fade-in">
         <!-- Intro -->
         <div id="intro">
-            <h1>Roger's<br />ePortfolio</h1>
+            <h1>engineering<br />ePortfolio</h1>
             <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
         </div>
 
-        <!-- Header -->
-        <header id="header">
-            <a href="index.html" class="logo">Projects</a>
-        </header>
+
 
         <!-- Nav -->
         <nav id="nav">
@@ -84,19 +89,21 @@
             <article class="post featured">
                 <header class="major">
                     <span class="date"></span>
-                    <h2><a href="#">Robotics Systems Engineering Student<br /></a></h2>
                 </header>
                 <div class="image-container">
                     <img src="images/IMG_0091.jpeg" alt="" class="downsized-image" />
                 </div>
+                <h4><a href="#">Roger Ng Zi Liang<br /></a></h4>
+                <h4><a href="#">Robotics Systems Engineering Student<br /></a></h4>
                 <ul class="actions special">
                     <p>Firm believer of overcoming self-restrictions and breaking limits, constantly seeking new profound skills and knowledge</p>
                 </ul>
             </article>
 
             <!-- Projects Header -->
-            <header class="major"></header>
-
+            <header id="projects-header" class="major">
+                <h1>Projects</h1>
+            </header>
             <!-- Posts -->
             <section class="posts post-grid">
 				
