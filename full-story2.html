@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Full Story</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Additional CSS for centering the image */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .downsized-image {
+            display: block;
+            margin: 0 auto;
+            width: 40%; /* Adjust the width as needed */
+            max-width: 600px; /* Set the max-width */
+        }
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; /* Adjust the gap as needed */
+        }
+        .video-container video {
+            flex: 1 1 48%; /* Adjust the width as needed */
+            max-width: 48%; /* Set the max-width */
+            width: 100%; /* Ensure the video takes the full width of its container */
+        }
+        .downsized-video {
+            width: 40%; /* Adjust the width as needed */
+            max-width: 300px; /* Set the max-width */
+        }
+    </style>
+</head>
+<body>
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">Roger's ePortfolio</a></h1>
+        </header>
+
+        <!-- Main -->
+        <article id="main">
+            <header class="major">
+                <h2>Project 1 & 2</h2>
+                <p>Building a lite kit</p>
+            </header>
+            <section>
+                <p></p>
+                <!-- Image inserted below -->
+                <img src="images/IMG_0531.jpeg" alt="Description of the image" class="downsized-image" />
+                <p>This robot was created by fabricating, assembling mechanical and electrical parts. Application of spin language, a specialized hardware programming language, 
+                    was used to perform machine-level actions.</p>
+                <!-- Image inserted below -->
+                <img src="images/IMG_0533.jpeg" alt="Description of the image" class="downsized-image" />
+                <p>Torchlight toggle and rotation</p>
+
+                <!-- Video 1 -->
+                <video controls class="downsized-image">
+                    <source src="videos/IMG_0530.MOV" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Holder and gear mechanism is designed and created using workshop resources</p>
+
+                <!-- Videos 2 and 3 in a flexbox container, with smaller size -->
+                <div class="video-container">
+                    <video controls class="downsized-video">
+                        <source src="videos/IMG_0085.MOV" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls class="downsized-video">
+                        <source src="videos/07307cf8-e26e-468a-a5bb-33a6048e9f8a.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>Directional movement testing of robot</p>
+
+                <!-- Video 4 -->
+                <video controls class="downsized-image">
+                    <source src="videos/IMG_0512.MOV" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Color tracking test</p>
+            </section>
+        </article>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
