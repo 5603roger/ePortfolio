@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-<style>
-
+    <style>
         /* Additional CSS for centering the image and video */
         .image-container, .video-container {
             display: flex;
@@ -19,12 +18,12 @@
             margin: 0 auto;
             width: 100%; /* Full width */
             max-width: 600px; /* Maximum width to downsize */
+            height: auto; /* Maintain aspect ratio */
         }
         .left-align {
             text-align: left;
         }
-
-</style>
+    </style>
 </head>
 <body>
     <div id="page-wrapper">
@@ -52,7 +51,7 @@
             </header>
             <!-- Image inserted below -->
             <div class="image-container">
-                <img src="images/limo2.png" alt="Visual representation of LIMO" class="downsized-image" />
+                <img src="images/limo2.png" alt="Visual representation of LIMO" class="downsized-media" />
             </div>
             <header class="major">
                 <h3>Methodology</h3>
@@ -80,7 +79,7 @@
             <header class="major">
                 <h4>Autonomous Navigation</h4>
                 <div class="left-align">
-                <p>Once the map and waypoints were set, I focused on enabling the LIMO robot to navigate autonomously:/p>
+                <p>Once the map and waypoints were set, I focused on enabling the LIMO robot to navigate autonomously:</p>
                 <ul>
                     <li>Starting the navigation stack in ROS to make use of the map and waypoints for path planning.</li>
                     <li>Monitoring the robot's progress in RViz to ensure it followed the planned path accurately.</li>
@@ -89,21 +88,21 @@
             </div>
             </header>
             <header class="major">
-                <h4>layout of maze & video demonstration</h4>
+                <h4>Layout of Maze & Video Demonstration</h4>
                 <div class="left-align">
             <!-- Image inserted below -->
             <div class="image-container">
-                <img src="images/physicalmaze.jpeg" alt="" class="downsized-media" />                    
+                <img src="images/physicalmaze.jpeg" alt="Physical maze layout" class="downsized-media" />                    
+            </div>
             <header class="major">
-                <h4></h4>
-                <div class="left-align">
-                    <div class="video-container">
-        
-                <video controls class="downsized-media">
-                    <source src="videos/limoaquarium.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>       
+                <h4>Video Demonstration</h4>
+                <div class="video-container">
+                    <video controls class="downsized-media">
+                        <source src="videos/limoaquarium.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </header>       
         </article>
 
         <!-- Footer -->
@@ -115,8 +114,8 @@
                 <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
             </ul>
         </footer>
-    </div>
         -->
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
