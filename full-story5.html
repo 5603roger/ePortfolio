@@ -23,6 +23,15 @@
         .left-align {
             text-align: left;
         }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .downsized-media {
+                max-width: 100%; /* Ensure full width on smaller screens */
+            }
+            .header, .major {
+                padding: 0 10px; /* Add some padding on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -63,7 +72,7 @@
                     <li>Launching the gmapping node to process the sensor data and generate a map of the maze.</li>
                     <li>Manually driving the robot through the maze to ensure all areas were scanned and included in the map.</li>
                 </ul>
-            </div>
+                </div>
             </header>
             <header class="major">
                 <h4>Waypoint setting</h4>
@@ -74,7 +83,7 @@
                     <li>Using RViz, a ROS visualization tool, to place waypoints on the map.</li>
                     <li>Configuring the move_base node in ROS to handle path planning and navigation to the set waypoints.</li>
                 </ul>
-            </div>
+                </div>
             </header>
             <header class="major">
                 <h4>Autonomous Navigation</h4>
@@ -85,7 +94,7 @@
                     <li>Monitoring the robot's progress in RViz to ensure it followed the planned path accurately.</li>
                     <li>Making necessary adjustments to the robot's parameters to optimize navigation performance.</li>
                 </ul>
-            </div>
+                </div>
             </header>
             <header class="major">
                 <h4>Layout of Maze & Video Demonstration</h4>
