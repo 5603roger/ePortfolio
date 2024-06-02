@@ -5,6 +5,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+<style>
+
+        /* Additional CSS for centering the image and video */
+        .image-container, .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px; /* Add some spacing between elements */
+        }
+        .downsized-media {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Full width */
+            max-width: 600px; /* Maximum width to downsize */
+        }
+        .left-align {
+            text-align: left;
+        }
+
+</style>
 </head>
 <body>
     <div id="page-wrapper">
@@ -20,8 +40,70 @@
                 <p>Porting over application of ROS onto a LIMO robot to navigate around a physical plane</p>
             </header>
             <section>
-                <p>Insert your detailed content here...</p>
+                <p>In this project, I embarked on an exciting journey to navigate a physical maze using the LIMO robot and the Robot Operating System (ROS). 
+                    This endeavor involved leveraging advanced robotic mapping and navigation techniques, 
+                    including the use of gmapping for creating a map of the maze and setting waypoints for precise navigation.</p>
             </section>
+            <header class="major">
+                <h3>Introduction to LIMO Robot and ROS</h3>
+                <p>The LIMO robot is a versatile, four-wheeled robotic platform designed for education, research, and prototyping. Its compatibility with ROS makes it an ideal tool for 
+                    implementing complex robotics projects. ROS is a flexible framework for writing robot software, 
+                    offering a collection of tools, libraries, and conventions to simplify the task of creating robust and scalable robot applications.</p>
+            </header>
+            <!-- Image inserted below -->
+            <div class="image-container">
+                <img src="images/limo2.png" alt="Visual representation of LIMO" class="downsized-image" />
+            </div>
+            <header class="major">
+                <h3>Methodology</h3>
+                <h4>Gmapping for Maze Mapping</h4>
+                <div class="left-align">
+                <p>Gmapping is a popular ROS package that allows for the creation of a 2D occupancy grid map using data from laser range finders and odometry. The process involved:</p>
+                <ul>
+                    <li>Setting up the LIMO robot with a LiDAR sensor to collect environmental data.</li>
+                    <li>Launching the gmapping node to process the sensor data and generate a map of the maze.</li>
+                    <li>Manually driving the robot through the maze to ensure all areas were scanned and included in the map.</li>
+                </ul>
+            </div>
+            </header>
+            <header class="major">
+                <h4>Waypoint setting</h4>
+                <div class="left-align">
+                <p>With a complete map of the maze, the next step was to set waypoints for navigation:</p>
+                <ul>
+                    <li>Identifying key points in the maze that the robot needed to navigate through.</li>
+                    <li>Using RViz, a ROS visualization tool, to place waypoints on the map.</li>
+                    <li>Configuring the move_base node in ROS to handle path planning and navigation to the set waypoints.</li>
+                </ul>
+            </div>
+            </header>
+            <header class="major">
+                <h4>Autonomous Navigation</h4>
+                <div class="left-align">
+                <p>Once the map and waypoints were set, I focused on enabling the LIMO robot to navigate autonomously:/p>
+                <ul>
+                    <li>Starting the navigation stack in ROS to make use of the map and waypoints for path planning.</li>
+                    <li>Monitoring the robot's progress in RViz to ensure it followed the planned path accurately.</li>
+                    <li>Making necessary adjustments to the robot's parameters to optimize navigation performance.</li>
+                </ul>
+            </div>
+            </header>
+            <header class="major">
+                <h4>layout of maze & video demonstration</h4>
+                <div class="left-align">
+            <!-- Image inserted below -->
+            <div class="image-container">
+                <img src="images/physicalmaze.jpeg" alt="" class="downsized-media" />                    
+            <header class="major">
+                <h4></h4>
+                <div class="left-align">
+                    <div class="video-container">
+        
+                <video controls class="downsized-media">
+                    <source src="videos/limoaquarium.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>       
         </article>
 
         <!-- Footer -->

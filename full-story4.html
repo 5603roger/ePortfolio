@@ -32,6 +32,15 @@
             width: 40%; /* Adjust the width as needed */
             max-width: 500px; /* Set the max-width */
         }
+        .flex-container {
+           display: flex;
+          justify-content: space-between;
+        }
+
+        .flex-item {
+         flex: 1;
+         margin-right: 20px; /* Adjust spacing between items */
+        }        
     </style>
 </head>
 <body>
@@ -45,19 +54,61 @@
         <article id="main">
             <header class="major">
                 <h2>Project 4</h2>
-                <p>Automate a box folding process using an omron robot.</p>
+                <p>Automate a box folding process using an Omron robot.</p>
             </header>
             <!-- Video 1 -->
             <div class="image-container">
                 <video controls class="downsized-image">
-                    <source src="videos/foldingbox.MOV" type="video/mp4">
+                    <source src="videos/foldingbox.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-                <p>Box folding procedures</p>
+            <p>In this project, I leveraged an Omron robot to automate the folding of SKU boxes. This initiative aimed to improve efficiency and reduce manual labor. Automating this task not only streamlined operations but also demonstrated the potential for robotics in everyday industrial applications.</p>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <header class="major">
+                        <h3>Project Goals</h3>
+                    </header>
+                    <ul>
+                        <li>Improving efficiency</li>
+                        <li>Demonstrating robotics application</li>
+                    </ul>
+                </div>
             
-                <p>Insert your detailed content here...</p>
-        
+                <div class="flex-item">
+                    <header class="major">
+                        <h3>Technical Details</h3>
+                    </header>
+                    <ul>
+                        <li>Hardware: Omron robot, custom-designed jig for box folding</li>
+                        <li>Software: ROS2 programming</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <header class="major">
+                <h3>Designing and prototyping</h3>
+            </header>
+            <p>To ensure the robot could accurately fold the boxes, a prototype jig was designed and tested. The jig simulates the folding process,
+                 allowing for adjustments and optimizations before implementation.</p>
+            <header class="major">
+            <h4>Prototype of jig used</h4>
+            <!-- Image inserted below -->
+            <div class="image-container">
+                <img src="images/designedjig.jpg" alt="Prototype of jig used to simulate folding process" class="downsized-image" />
+            </div>
+            <header class="major">
+            <h3>Implementation and testing</h3>   
+            <p>The box folding procedure was meticulously programmed into the Omron robot. Multiple iterations and tests were 
+                conducted to refine the process and ensure reliability and efficiency.</p>        
+            <header class="major">
+            <h4>Full video of box folding procedure</h4>
+            <div class="image-container">
+                <video controls class="downsized-image">
+                    <source src="videos/Full Video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </article>
 
         <!-- Footer -->
@@ -69,8 +120,8 @@
                 <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
             </ul>
         </footer>
-    </div>
         -->
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
