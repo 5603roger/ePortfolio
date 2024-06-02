@@ -51,11 +51,22 @@
         }
         /* CSS for the Projects header */
         header#projects-header {
-        text-align: center; /* Center align text */
-        margin-bottom: 20px; /* Add some bottom margin for spacing */
+            text-align: center; /* Center align text */
+            margin-bottom: 20px; /* Add some bottom margin for spacing */
         }
         header#projects-header h3 {
             font-weight: bold; /* Make the text bold */
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 768px) {
+            .post-grid {
+                flex-direction: column;
+            }
+            .post-grid .post {
+                flex: 1 1 100%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -65,27 +76,21 @@
     <div id="wrapper" class="fade-in">
         <!-- Intro -->
         <div id="intro">
-            <h1>engineering<br />ePortfolio</h1>
+            <h1>Engineering<br />ePortfolio</h1>
             <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
         </div>
-
-
 
         <!-- Nav -->
         <nav id="nav">
             <ul class="links">
-                
                 <li class="active"><a href="index.html">HOME</a></li>
-                <!--<li><a href="full-story.html">Allocates</a></li>-->
-                
+                <li><a href="full-story.html">Current Project</a></li>
             </ul>
-            
             <ul class="icons">
                 <li><a href="https://sg.linkedin.com/in/1985-roger-ng?original_referer=https%3A%2F%2Fwww.google.com%2F" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
                 <li><a href="https://github.com/5603roger" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
                 <li><a href="RESUME_RogerNg.docx" download="Roger_CV.docx" class="icon fa-file-pdf"><span class="label">CV</span></a></li> <!-- Added CV download link -->
             </ul>
-            
         </nav>
 
         <!-- Main -->
@@ -102,7 +107,6 @@
                 <h4><a href="#">Robotics Systems Engineering Student<br /></a></h4>
                 <ul class="actions special">
                     <p>Welcome to my ePortfolio! I am a dedicated Robotics Systems Engineering student with a passion for innovation and continuous learning. My journey is fueled by a relentless pursuit of excellence and a drive to push beyond conventional boundaries. Here, you'll discover my diverse projects and achievements that showcase my commitment to mastering new technologies and applying them in real-world scenarios. Join me as I explore the fascinating world of robotics and engineering, where every challenge is an opportunity for growth and every success a step towards a smarter future.
-
                     </p>
                 </ul>
             </article>
@@ -111,86 +115,70 @@
             <header id="projects-header" class="major">
                 <h1>Projects</h1>
             </header>
+
             <!-- Posts -->
             <section class="posts post-grid">
-				
-				<article class="post">
-					<header>
-						<h3><a href="#">Project 1 & 2</a></h3>
-					</header>
-					<div class="image-container">
-						<img src="images/IMG_0531.jpeg" alt="" class="downsized-image"/>
-					</div>
-					<div class="content">
+                <article class="post">
+                    <header>
+                        <h3><a href="#">Project 1 & 2</a></h3>
+                    </header>
+                    <div class="image-container">
+                        <img src="images/IMG_0531.jpeg" alt="" class="downsized-image"/>
+                    </div>
+                    <footer>
+                        <p>Combining Robotics fundamentals to create a functional robot</p>
+                        <ul class="actions special">
+                            <li><a href="full-story2.html" class="button">Full Story</a></li>
+                        </ul>
+                    </footer>
+                </article>
 
+                <article class="post">
+                    <header>
+                        <h3><a href="#">Project 3</a></h3>
+                    </header>
+                    <div class="image-container">
+                        <img src="images/turtlebot3_series.png" alt="" class="downsized-image" />
+                    </div>
+                    <footer>
+                        <p>Application of ROS to create a digital maze solver</p>
+                        <ul class="actions special">
+                            <li><a href="full-story3.html" class="button">Full Story</a></li>
+                        </ul>
+                    </footer>
+                </article>
 
-					</div>
-					<footer>
-						<p>Combining Robotics fundamentals to create a functional robot</p>
-						<ul class="actions special">
-							<li><a href="full-story2.html" class="button">Full Story</a></li>
-						</ul>
-					</footer>
-				</article>
-				
-				<article class="post">
-					<header>
-						<h3><a href="#">Project 3</a></h3>
-					</header>
-					<div class="image-container">
-						<img src="images/turtlebot3_series.png" alt="" class="downsized-image" />
-					</div>
-					<div class="content">
+                <article class="post">
+                    <header>
+                        <h3><a href="#">Project 4</a></h3>
+                    </header>
+                    <div class="image-container">
+                        <img src="images/omron.jpg" alt="" class="downsized-image" />
+                    </div>
+                    <footer>
+                        <p>Automate a box folding process using an omron robot.</p>
+                        <ul class="actions special">
+                            <li><a href="full-story4.html" class="button">Full Story</a></li>
+                        </ul>
+                    </footer>
+                </article>
 
-
-					</div>
-					<footer>
-						<p>Application of ROS to create a digital maze solver</p>
-						<ul class="actions special">
-							<li><a href="full-story3.html" class="button">Full Story</a></li>
-						</ul>
-					</footer>
-				</article>
-				
-				<article class="post">
-					<header>
-						<h3><a href="#">Project 4</a></h3>
-					</header>
-
-					<div class="image-container">
-						<img src="images/omron.jpg" alt="" class="downsized-image" />
-					</div>
-					<div class="content">
-
-					</div>
-					<footer>
-						<p>Automate a box folding process using an omron robot.</p>
-						<ul class="actions special">
-							<li><a href="full-story4.html" class="button">Full Story</a></li>
-						</ul>
-					</footer>
-				</article>
-				
-				<article class="post">
-					<header>
-						<h3><a href="#">Systems Engineering Project 1</a></h3>
-					</header>
-					<div class="image-container">
-						<img src="images/limo.jpeg" alt="" class="downsized-image" />
-					</div>
-					<div class="content">
-
-
-					</div>
-					<footer>
-						<p>Porting over application of ROS onto a LIMO robot to navigate around a physical plane</p>
-						<ul class="actions special">
-							<li><a href="full-story5.html" class="button">Full Story</a></li>
-						</ul>
-					</footer>
-				</article>
-				
-				
+                <article class="post">
+                    <header>
+                        <h3><a href="#">Systems Engineering Project 1</a></h3>
+                    </header>
+                    <div class="image-container">
+                        <img src="images/limo.jpeg" alt="" class="downsized-image" />
+                    </div>
+                    <footer>
+                        <p>Porting over application of ROS onto a LIMO robot to navigate around a physical plane</p>
+                        <ul class="actions special">
+                            <li><a href="full-story5.html" class="button">Full Story</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            </section>
+        </div>
 
         <!-- Scripts -->
         <script src="assets/js/jquery.min.js"></script>
