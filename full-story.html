@@ -33,6 +33,15 @@
         .left-align {
             text-align: left;
         }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            .flex-container > div {
+                min-width: 100%; /* Full width on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
