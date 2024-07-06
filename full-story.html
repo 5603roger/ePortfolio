@@ -6,7 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        /* Additional CSS for centering the image and video */
+        /* Flex container to place text and image side by side */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Optional: Add space between items */
+            align-items: flex-start; /* Align items at the start */
+        }
+        .flex-container > div {
+            flex: 1; /* Distribute the space equally */
+            min-width: 300px; /* Minimum width to ensure responsiveness */
+        }
         .image-container, .video-container {
             display: flex;
             justify-content: center;
@@ -17,11 +27,20 @@
             display: block;
             margin: 0 auto;
             width: 100%; /* Full width */
-            max-width: 400px; /* Maximum width to downsize */
+            max-width: 300px; /* Maximum width to downsize */
             height: auto; /* Maintain aspect ratio */
         }
         .left-align {
             text-align: left;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            .flex-container > div {
+                min-width: 100%; /* Full width on smaller screens */
+            }
         }
     </style>
 </head>
@@ -50,39 +69,50 @@
                 <p>Food printing systems</p>
             </header>
             <section>
-                <p>In this project, I am tasked to develop an innovative food printing system. Although not explicitly stated, we will be 
-                    constraining the scope of the existing food printing system to the Evebot food-grade portable printpen.
-                </p>
+                <p>In this project, I am tasked to develop an innovative food printing system. The output of this project will be to make an improvement to the Evebot food-grade portable system. Although not explicitly stated, we will be constraining the scope of the existing food printing system to the Evebot food-grade portable printpen due to factors such as resource and budget. This project will showcase the use of systems engineering principles and concepts on the food industry topic to explain how we got to each step.</p>
             </section>
-            <div class="left-align">
-                <p>Objective:</p>
-                <ul>
-                    <li>Selecting a specific food industry segment</li>
-                    <li>Analyzing it using Systems Engineering principles</li>
-                    <li>Develop a working prototype that demonstrates key features and functionality</li>
-                </ul>
-            </div>
-            <!-- Image inserted below -->
-            <div class="image-container">
-                <img src="images/product.png" alt="" class="downsized-media" />
-            </div>
-            <header class="major">
-                <h3>Work Done</h3>
+
+            <!-- Objectives and Industry side by side -->
+            <div class="flex-container">
                 <div class="left-align">
-                    <p>Industry :</p>
+                    <h4>Objective:</h4>
+                    <ul>
+                        <li>Selecting a specific food industry segment</li>
+                        <li>Analyzing it using Systems Engineering principles</li>
+                        <li>Develop a working prototype that demonstrates key features and functionality</li>
+                    </ul>
+                </div>
+
+                <div class="left-align">
+                    <h4>Industry :</h4>
                     <ul>
                         <li>Looking into existing food printers</li>
                         <li>Identifying gaps within existing system</li>
                         <li>Identify ways to improve on it</li>
                     </ul>
                 </div>
-            </header>
+            </div>
+
+            <!-- Image and text side by side -->
+            <div class="flex-container">
+                <div>
+                    <img src="images/product.png" alt="" class="downsized-media" />
+                </div>
+                <div>
+                    <header class="major">
+                        <h4>What is Evebot food-grade portable printpen?</h4>
+                        <div class="left-align">
+                            <p>Evebot food-grade portable printpen is a handheld inkjet printer made specifically for food surfaces. The system is designed for customization of food printing, mainly for macarons, cakes, coffee, and more.</p>
+                        </div>
+                    </header>
+                </div>
+            </div>
+
             <header class="major">
-                <h4>In depth overview</h4>
+                <h4>Domain exploration</h4>
                 <div class="left-align">
-                    <p>The team and I first researched on existing food printing systems, and it landed on the topics of 2D and 3D printers. 2D food printers are essentially traditional inkjet printers, whereas 3D food printers operate through an extruder to move along an X-Y-Z axis.</p>
-                    <p>Next, through looking into food printing systems, the following functionalities were crafted:</p>
-                    <p>Functionalities of food printing systems:</p>
+                    <p>The team and I first researched existing food printing systems, and it landed on the topics of 2D and 3D printers. 2D food printers are essentially traditional inkjet printers, whereas 3D food printers operate through an extruder to move along an X-Y-Z axis.</p>
+                    <p>Functionalities of food printing systems identified:</p>
                     <ul>
                         <li>Output materials through the nozzle</li>
                         <li>Move the nozzle in multiple planes</li>
@@ -91,16 +121,16 @@
                 </div>
             </header>
             <header class="major">
-                <h4>Exploration of new ideas</h4>                
+                <h4>Exploration of new ideas</h4>
                 <div class="left-align">
-                    <p>With the current functionalities we gathered, we then started looking into a different domain. The topic we landed is regarding the visually impaired and their issue with accessibility of food information. With the problem identified, we then looked into existing solutions such as braille embossers and Navilens, and functionalities of each solution was identified.</p>
+                    <p>With the current functionalities we gathered, we then started looking into a different domain. The topic we landed is regarding the visually impaired and their issue with accessibility of food information. With the problem identified, we then looked into existing solutions such as braille embossers and Navilens, and functionalities of each solution were identified.</p>
                 </div>
             </header>
             <header class="major">
                 <h4>Choosing the solution</h4>
                 <div class="left-align">
                     <p>The team had decided to pick braille as the project focus, due to reasons such as faster information feedback using tactile and smartphone dependency.</p>
-                    <p>Functionalities of Braille Embossers:</p>
+                    <p>Functionalities of Braille Embossers identified:</p>
                     <ul>
                         <li>Elevate the surface</li>
                         <li>Transform input into machine actions</li>
@@ -112,34 +142,33 @@
             <header class="major">
                 <h4>Comparing and linking functionalities</h4>
                 <div class="left-align">
-                    <p>A link between food printing systems and braille embossers was done which led us to ultimately land into the problem of extruding materials to elevate the surface.</p>
+                    <p>The functionalities of the food printing system and braille embossers were compared and a link between food printing systems and braille embossers was done which led us to ultimately land into the problem of extruding materials to elevate the surface.</p>
                 </div>
             </header>
             <header class="major">
                 <h4>Concept selection</h4>
                 <div class="left-align">
-                    <p>In order to create braille onto food product surfaces, different plausible solutions were looked into such as thermal radiation and ultraviolet light. A comparison between 
-                        the two did not reach any fruitful conclusion due to their similarities and issues, with the team ultimately sourcing for a different, third alternative.
-                    </p>
+                    <p>In order to create braille onto food product surfaces, different plausible solutions were looked into such as thermal radiation and ultraviolet light. A comparison between the two did not reach any fruitful conclusion due to their similarities and issues, with the team ultimately sourcing for a different, third alternative.</p>
                 </div>
             </header>
             <div class="image-container">
-                <img src="images/comparison.png" alt="Thermal vs UV vs Binder Jetting"  />
+                <img src="images/comparison.png" alt="Thermal vs UV vs Binder Jetting" />
             </div>            
             <header class="major">
                 <h4>Binder Jetting</h4>
                 <div class="left-align">
-                <p>Binder Jetting was the solution that the team ended up with and ultimately created potential concepts to work with. So why binder jetting? 
-                    Binder jetting involves depositing liquid binding agents into thin layer of powder particles, which we believe is the most feasible. With the 
-                    correct amount of liquid and powder, we could potential achieve an optimal result. Most importantly, unlike the other two solutions which required 
-                    replacement to be done onto the nozzle, we are able to build upon the existing system.
-                </p>
+                    <p>Binder Jetting was the solution that the team ended up with and ultimately created potential concepts to work with. So why binder jetting? Binder jetting involves depositing liquid binding agents into a thin layer of powder particles, which we believe is the most feasible. With the correct amount of liquid and powder, we could potentially achieve an optimal result. Most importantly, unlike the other two solutions which required replacement to be done onto the nozzle, we are able to build upon the existing system.</p>
                 </div>
             </header>
             <div class="image-container">
-                <img src="images/binderjetting.png" alt=""  />
+                <img src="images/binderjetting.png" alt="" />
             </div>            
-                
+            <header class="major">
+                <h4>Concept of solution</h4>
+                <div class="left-align">
+                    <p>In order to print braille onto food packaging, Evebot has to create layers above the surface to elevate it, such that the visually impaired can feel the tactile feedback. Evebot will roll over the surface a few times to output the layers. Powder will be outputted through a funnel that we will be making, whereas liquid particles will be outputted through the original Evebot nozzle.</p>
+                </div>            
+            </header>
         </article>
     </div>
 </body>
