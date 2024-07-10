@@ -54,16 +54,43 @@
             text-align: center; /* Center align text */
             margin-bottom: 20px; /* Add some bottom margin for spacing */
         }
-        header#projects-header h3 {
+        header#projects-header h1 {
             font-weight: bold; /* Make the text bold */
         }
-
-        /* Mobile specific adjustments */
+        /* Skills Section */
+        .skills-section {
+            padding: 20px;
+            text-align: center;
+        }
+        .skills-section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .skills-list {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Adjust the gap as needed */
+        }
+        .skills-list div {
+            flex: 1 1 45%; /* Adjust the width as needed */
+            box-sizing: border-box;
+        }
+        .skills-list h3 {
+            margin-bottom: 10px;
+        }
         @media (max-width: 768px) {
             .post-grid {
                 flex-direction: column;
             }
             .post-grid .post {
+                flex: 1 1 100%;
+                margin-bottom: 20px;
+            }
+            .skills-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .skills-list div {
                 flex: 1 1 100%;
                 margin-bottom: 20px;
             }
@@ -106,10 +133,38 @@
                 <h4><a href="#">Roger Ng Zi Liang<br /></a></h4>
                 <h4><a href="#">Robotics Systems Engineering Student<br /></a></h4>
                 <ul class="actions special">
-                    <p>Welcome to my ePortfolio! I am a dedicated Robotics Systems Engineering student with a passion for innovation and continuous learning. My journey is fueled by a relentless pursuit of excellence and a drive to push beyond conventional boundaries. Here, you'll discover my diverse projects and achievements that showcase my commitment to mastering new technologies and applying them in real-world scenarios. Join me as I explore the fascinating world of robotics and engineering, where every challenge is an opportunity for growth and every success a step towards a smarter future.
+                    <p>I am a dedicated Robotics Systems Engineering student with a passion for innovation and continuous learning. Here, you'll discover my diverse projects and achievements that showcase my commitment to mastering new technologies and applying them in real-world scenarios.
                     </p>
                 </ul>
             </article>
+
+            <!-- Skills Section -->
+            <section class="skills-section">
+                <h1>Skillset</h1>
+                <div class="skills-list">
+                    <div>
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Data mining software: Rapid Miner</li>
+                            <li>Microsoft Office: Word, Excel, PowerPoint, VBA</li>
+                            <li>SolidWorks</li>
+                            <li>Basic Python and C programming</li>
+                            <li>Systems Engineering (SEBOK)</li>
+                            <li>Project management</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Workplace Skills</h3>
+                        <ul>
+                            <li>Fluent in English and Chinese</li>
+                            <li>Strong teamwork and Analytical skills</li>
+                            <li>Responsible, meticulous, and self-motivated</li>
+                            <li>Effective interpersonal and communication skills</li>
+                            <li>Ability to work independently</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
             <!-- Projects Header -->
             <header id="projects-header" class="major">
