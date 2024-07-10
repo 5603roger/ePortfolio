@@ -5,189 +5,152 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* Additional CSS for centering the image */
-        .image-container {
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .flex-container > div {
+            flex: 1;
+            min-width: 300px;
+        }
+        .image-container, .video-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 20px;
         }
-        .downsized-image {
+        .downsized-media {
             display: block;
             margin: 0 auto;
-            width: 100%; /* Adjust the width as needed */
-            max-width: 300px; /* Set the max-width */
+            width: 100%;
+            max-width: 300px;
+            height: auto;
         }
-        /* CSS for two side-by-side posts */
-        .post-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* Adjust the gap as needed */
-            justify-content: space-between;
+        .left-align {
+            text-align: left;
         }
-        .post-grid .post {
-            flex: 1 1 calc(50% - 20px); /* Two posts per row with space in between */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: center; /* Center align text */
-            margin-bottom: 20px; /* Space between rows */
-            box-sizing: border-box;
-            border-bottom: 1px solid #ccc; /* Add a border to the bottom of each post */
-            padding-bottom: 20px; /* Add some padding at the bottom for spacing */
-        }
-        .post-grid .post header, .post-grid .post .content, .post-grid .post .actions {
-            flex: 0 1 auto;
-        }
-        .post-grid .post .content {
-            flex: 1 1 auto; /* Make content take up the remaining space */
-        }
-        .post-grid .post .actions {
-            margin-top: 20px;
-        }
-        .post-grid .post .image-container {
-            flex: 0 1 auto;
-        }
-        /* CSS for the Projects header */
-        header#projects-header {
-            text-align: center; /* Center align text */
-            margin-bottom: 20px; /* Add some bottom margin for spacing */
-        }
-        header#projects-header h3 {
-            font-weight: bold; /* Make the text bold */
-        }
-
-        /* Mobile specific adjustments */
         @media (max-width: 768px) {
-            .post-grid {
+            .flex-container {
                 flex-direction: column;
             }
-            .post-grid .post {
-                flex: 1 1 100%;
-                margin-bottom: 20px;
+            .flex-container > div {
+                min-width: 100%;
             }
+            .major {
+                padding: 0 10px;
+                word-wrap: break-word;
+            }
+            .image-container img {
+                max-width: 100%;
+            }
+        }
+        button {
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
-
-<body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper" class="fade-in">
-        <!-- Intro -->
-        <div id="intro">
-            <h1>Engineering<br />ePortfolio</h1>
-            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-        </div>
-
-        <!-- Nav -->
-        <nav id="nav">
-            <ul class="links">
-                <li class="active"><a href="index.html">HOME</a></li>
-                <li><a href="full-story.html">Current Project</a></li>
-            </ul>
-            <ul class="icons">
-                <li><a href="https://sg.linkedin.com/in/1985-roger-ng?original_referer=https%3A%2F%2Fwww.google.com%2F" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/5603roger" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="RogerNg_CV2024.pdf" download="RogerNg_CV2024.pdf" class="icon fa-file-pdf"><span class="label">CV</span></a></li> <!-- Added CV download link -->
-            </ul>
-        </nav>
+<body>
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">Roger's ePortfolio</a></h1>
+            <button onclick="window.location.href='index.html'">Back to Home</button>
+        </header>
 
         <!-- Main -->
-        <div id="main">
-            <!-- Featured Post -->
-            <article class="post featured">
-                <header class="major">
-                    <span class="date"></span>
-                </header>
-                <div class="image-container">
-                    <img src="images/IMG_0091.jpeg" alt="" class="downsized-image" />
-                </div>
-                <h4><a href="#">Roger Ng Zi Liang<br /></a></h4>
-                <h4><a href="#">Robotics Systems Engineering Student<br /></a></h4>
-                <ul class="actions special">
-                    <p>Welcome to my ePortfolio! I am a dedicated Robotics Systems Engineering student with a passion for innovation and continuous learning. My journey is fueled by a relentless pursuit of excellence and a drive to push beyond conventional boundaries. Here, you'll discover my diverse projects and achievements that showcase my commitment to mastering new technologies and applying them in real-world scenarios. Join me as I explore the fascinating world of robotics and engineering, where every challenge is an opportunity for growth and every success a step towards a smarter future.
-                    </p>
-                </ul>
-            </article>
+        <article id="main">
+            <header class="major">
+                <h2>Systems Engineering Project 2</h2>
+                <p>Food Printing Systems</p>
+            </header>
+            <section>
+                <p>In this project, I developed an innovative food printing system to improve accessibility for visually impaired individuals. This project showcases my ability to apply systems engineering principles to a real-world problem, demonstrating key skills and innovative thinking.</p>
+            </section>
 
-            <!-- Projects Header -->
-            <header id="projects-header" class="major">
-                <h1>Projects</h1>
+            <!-- Objectives and Industry side by side -->
+            <div class="flex-container">
+                <div class="left-align">
+                    <h4>Objective:</h4>
+                    <ul>
+                        <li>Analyze a food industry segment using Systems Engineering principles</li>
+                        <li>Develop a working prototype demonstrating key features and functionality</li>
+                    </ul>
+                </div>
+
+                <div class="left-align">
+                    <h4>Industry Focus:</h4>
+                    <p>Evebot Food-Grade Portable Printpen: A handheld inkjet printer for customizing food surfaces like macarons, cakes, and coffee.</p>
+                </div>
+            </div>
+
+            <!-- Image and text side by side -->
+            <div class="flex-container">
+                <div>
+                    <img src="images/product.png" alt="" class="downsized-media" />
+                </div>
+                <div>
+                    <header class="major">
+                        <h4>Why It Matters</h4>
+                        <div class="left-align">
+                            <p>This project demonstrates:</p>
+                            <ul>
+                                <li><strong>Systems Engineering Application:</strong> Ability to analyze, design, and implement complex systems.</li>
+                                <li><strong>Innovation:</strong> Identifying gaps and creating solutions for real-world problems.</li>
+                                <li><strong>Technical Skills:</strong> Proficiency in research, prototyping, and integrating new technologies.</li>
+                                <li><strong>Inclusivity:</strong> Developing accessible solutions for diverse user needs.</li>
+                            </ul>
+                        </div>
+                    </header>
+                </div>
+            </div>
+
+            <header class="major">
+                <h4>Solution Concept</h4>
+                <div class="left-align">
+                    <p>To print braille onto food packaging, we selected binder jetting. This involves depositing liquid binding agents into powder layers to create raised surfaces. This method builds upon the existing Evebot system without needing extensive modifications.</p>
+                </div>
+            </header>
+            
+            <div class="image-container">
+                <img src="images/binderjetting.png" alt="Binder Jetting Process" />
+            </div>
+
+            <header class="major">
+                <h4>Personal Contributions</h4>
+                <div class="left-align">
+                    <ul>
+                        <li><strong>Research Lead:</strong> Investigated food printing systems and accessibility solutions.</li>
+                        <li><strong>Concept Development:</strong> Selected and developed the binder jetting solution.</li>
+                        <li><strong>Prototype Design:</strong> Designed and integrated the funnel mechanism with the Evebot system.</li>
+                    </ul>
+                </div>
             </header>
 
-            <!-- Posts -->
-            <section class="posts post-grid">
-                <article class="post">
-                    <header>
-                        <h3><a href="#">Project 1 & 2</a></h3>
-                    </header>
-                    <div class="image-container">
-                        <img src="images/IMG_0531.jpeg" alt="" class="downsized-image"/>
-                    </div>
-                    <footer>
-                        <p>Combining Robotics fundamentals to create a functional robot</p>
-                        <ul class="actions special">
-                            <li><a href="full-story2.html" class="button">Full Story</a></li>
-                        </ul>
-                    </footer>
-                </article>
+            <header class="major">
+                <h4>Skills and Learning</h4>
+                <div class="left-align">
+                    <ul>
+                        <li>Project management</li>
+                        <li>Research and analysis</li>
+                        <li>Prototyping and design</li>
+                        <li>Collaboration</li>
+                    </ul>
+                </div>
+            </header>
 
-                <article class="post">
-                    <header>
-                        <h3><a href="#">Project 3</a></h3>
-                    </header>
-                    <div class="image-container">
-                        <img src="images/turtlebot3_series.png" alt="" class="downsized-image" />
-                    </div>
-                    <footer>
-                        <p>Application of ROS to create a digital maze solver</p>
-                        <ul class="actions special">
-                            <li><a href="full-story3.html" class="button">Full Story</a></li>
-                        </ul>
-                    </footer>
-                </article>
-
-                <article class="post">
-                    <header>
-                        <h3><a href="#">Project 4</a></h3>
-                    </header>
-                    <div class="image-container">
-                        <img src="images/omron.jpg" alt="" class="downsized-image" />
-                    </div>
-                    <footer>
-                        <p>Automate a box folding process using an omron robot.</p>
-                        <ul class="actions special">
-                            <li><a href="full-story4.html" class="button">Full Story</a></li>
-                        </ul>
-                    </footer>
-                </article>
-
-                <article class="post">
-                    <header>
-                        <h3><a href="#">Systems Engineering Project 1</a></h3>
-                    </header>
-                    <div class="image-container">
-                        <img src="images/limo.jpeg" alt="" class="downsized-image" />
-                    </div>
-                    <footer>
-                        <p>Porting over application of ROS onto a LIMO robot to navigate around a physical plane</p>
-                        <ul class="actions special">
-                            <li><a href="full-story5.html" class="button">Full Story</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            </section>
-        </div>
-
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+            <header class="major">
+                <h4>Future Work</h4>
+                <div class="left-align">
+                    <p>Next steps include further testing and refinement of the prototype, user trials, and exploring additional applications.</p>
+                </div>
+            </header>
+        </article>
     </div>
 </body>
 </html>
