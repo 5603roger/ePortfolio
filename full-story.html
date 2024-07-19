@@ -26,7 +26,7 @@
             display: block;
             margin: 0 auto;
             width: 100%;
-            max-width: 300px;
+            max-width: 500px;
             height: auto;
         }
         .left-align {
@@ -48,18 +48,18 @@
         <header id="header">
             <h1><a href="index.html">Roger's ePortfolio</a></h1>
         </header>
-                <!-- Nav -->
-                <nav id="nav">
-                    <ul class="links">
-                        <li class="active"><a href="index.html">HOME</a></li>
-                        <li><a href="full-story.html">Current Project</a></li>
-                    </ul>
-                    <ul class="icons">
-                        <li><a href="https://sg.linkedin.com/in/1985-roger-ng?original_referer=https%3A%2F%2Fwww.google.com%2F" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                        <li><a href="https://github.com/5603roger" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                        <li><a href="RogerNg_CV2024.pdf" download="RogerNg_CV2024.pdf" class="icon fa-file-pdf"><span class="label">CV</span></a></li> <!-- Added CV download link -->
-                    </ul>
-                </nav>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">HOME</a></li>
+                <li><a href="full-story.html">Current Project</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://sg.linkedin.com/in/1985-roger-ng?original_referer=https%3A%2F%2Fwww.google.com%2F" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/5603roger" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="RogerNg_CV2024.pdf" download="RogerNg_CV2024.pdf" class="icon fa-file-pdf"><span class="label">CV</span></a></li> <!-- Added CV download link -->
+            </ul>
+        </nav>
         <!-- Main -->
         <article id="main">
             <header class="major">
@@ -108,9 +108,20 @@
             </div>
 
             <header class="major">
-                <h4>Solution Concept</h4>
+                <h2>Solution Concept</h2>
                 <div class="left-align">
-                    <p>To print braille onto food packaging, we selected binder jetting. This involves depositing liquid binding agents into powder layers to create raised surfaces. This method builds upon the existing Evebot system without needing extensive modifications.</p>
+                    <p>Printing an additional layer of protection above prints made by evebot on food while keeping it food grade and usable</p>
+                </div>
+                <!-- Context and Why Replace side by side -->
+                <div class="flex-container">
+                    <div class="left-align">
+                        <h4>Context</h4>
+                        <p>Print labels are pasted on food in groceries for stocks counting and expiry. The purpose of this solution is to replace the label stickers used on fruits with evebot.</p>
+                    </div>
+                    <div class="left-align">
+                        <h4>Why replace?</h4>
+                        <p>Food that was originally ready to eat now requires the stickers to be peeled before consumption. The incorporation of food-safe projects will allow for immediate consumption.</p>
+                    </div>
                 </div>
             </header>
             
@@ -118,20 +129,18 @@
                 <img src="images/binderjetting.png" alt="Binder Jetting Process" />
             </div>
 
-            <header class="major">
-                <h4>Personal Contributions</h4>
+            <!-- Personal Contributions and Skills and Learning side by side -->
+            <div class="flex-container">
                 <div class="left-align">
+                    <h4>Personal Contributions</h4>
                     <ul>
                         <li><strong>Research Lead:</strong> Investigated food printing systems and accessibility solutions.</li>
                         <li><strong>Concept Development:</strong> Selected and developed the binder jetting solution.</li>
                         <li><strong>Prototype Design:</strong> Designed and integrated the funnel mechanism with the Evebot system.</li>
                     </ul>
                 </div>
-            </header>
-
-            <header class="major">
-                <h4>Skills and Learning</h4>
                 <div class="left-align">
+                    <h4>Skills and Learning</h4>
                     <ul>
                         <li><strong>Project Management</strong></li>
                         <li><strong>Research and Analysis</strong></li>
@@ -139,22 +148,34 @@
                         <li><strong>Collaboration</strong></li>
                     </ul>
                 </div>
-            </header>
-            <header class="major">
-                <h4>CAD Drawing of linear displacement mechanism</h4>
-            <div class="image-container">
-                <img src="Toothpaste squeezer.JPG" alt="CAD drawing" />
             </div>
             <header class="major">
+                <h4>CAD Drawing of linear displacement mechanism</h4>
+                <div class="image-container">
+                    <img src="Toothpaste squeezer.JPG" alt="CAD drawing" class="downsized-media"/>
+                </div>
+            </header>
+            <header class="major">
                 <h4>Prototype Showcase</h4>
+                <div class="image-container">
+                    <img src="images/prototype.png" alt="prototype image" class="downsized-media"/>
+                </div> 
+            </header>
+            <header class="major">
+                <h4>Test cases</h4>
+                <div class="image-container">
+                    <img src="images/testcase.jpg" alt="testcase image" class="downsized-media"/>
+                </div> 
                 <div class="left-align">
-                    <p>...</p>
+                    <p>From the above criteria set, we can see the prototype satisfies all of it, and it is ready to proceed to the next step.</p>
                 </div>
             </header>
             <header class="major">
                 <h4>Future Work</h4>
                 <div class="left-align">
-                    <p>Next steps include further testing and refinement of the prototype, user trials, and exploring additional applications.</p>
+                    <p>Next steps include further testing and refinement of the prototype, user trials, and exploring additional applications of printing food labels. Phase one of this project has concluded,
+                        and we can start pitching this idea towards potential stakeholders.
+                    </p>
                 </div>
             </header>
         </article>
