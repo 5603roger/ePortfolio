@@ -40,6 +40,19 @@
                 min-width: 100%;
             }
         }
+        .testcase-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 300px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
+            overflow: hidden;
+        }
+        .testcase-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -110,7 +123,7 @@
             <header class="major">
                 <h2>Solution Concept</h2>
                 <div class="left-align">
-                    <p>Printing an additional layer of protection above prints made by evebot on food while keeping it food grade and usable</p>
+                    <p>Printing a clear coat over prints made by evebot on food while keeping it food grade and usable</p>
                 </div>
                 <!-- Context and Why Replace side by side -->
                 <div class="flex-container">
@@ -126,8 +139,15 @@
             </header>
             
             <div class="image-container">
-                <img src="images/binderjetting.png" alt="Binder Jetting Process" />
+                <img src="images/sketch.png" alt="preliminary sketch of product" />
             </div>
+            <header class="major">
+                <h3>Preliminary sketch of concept</h3>
+                <p>The concept will be Incorporating a printpen to create food safe labels to replace traditional plastic labels, and creating a coating layer using wax to ensure the print does not fade. As wax has to be heated up to liquify, a heating mechanism has to be in place.</p>
+                <img src="images/conceptfunctionality.jpg" alt="functionality to follow" />
+                <p>The table above are the functionalities that will be used as the basis for verification. Each functionality is linked to a part of the prototype as showned on the right.</p>
+            </header>
+
 
             <!-- Personal Contributions and Skills and Learning side by side -->
             <div class="flex-container">
@@ -150,30 +170,65 @@
                 </div>
             </div>
             <header class="major">
-                <h4>CAD Drawing of linear displacement mechanism</h4>
+                <h4>CAD Drawing of prototype</h4>
                 <div class="image-container">
-                    <img src="Toothpaste squeezer.JPG" alt="CAD drawing" class="downsized-media"/>
+                    <img src="images/gearboxcad.jpg" alt="CAD drawing" class="downsized-media"/>
+
+                    <img src="images/extrudercad.jpg" alt="CAD drawing" class="downsized-media"/>
                 </div>
+                <div class="image-container">
+                    <img src="images/softwarecad.jpg" alt="CAD drawing" class="downsized-media"/>
+
+                    <img src="images/fullcad.jpg" alt="CAD drawing" class="downsized-media"/>
+                </div>
+                <p>The CAD drawing of the body frame, and the different methods of extrusion was drawn. The above diagrams are cad drawings for the prototype. It features a movement
+
+                    system with the usage of a 12 volt DC gear-box motor, which will provide rotational torque to move the platform in the X axis. The platform will be used to accommodate the extruder system, which will be required to navigate in the Y axis. The prototype will feature a linear displacement mechanism for extrusion. The extruder will be mounted onto the rod, and the TT motor will be mounted at the top of the syringe, which acts as an opening and closing mechanism for the syringe.</p>
             </header>
             <header class="major">
                 <h4>Prototype Showcase</h4>
                 <div class="image-container">
-                    <img src="images/prototype.jpeg" alt="prototype image" class="downsized-media"/>
+                    <img src="images/actualprototype.JPG" alt="prototype image" class="downsized-media"/>
+                    <img src="videos/prototypeshowcase.mov" alt="prototype video" class="downsized-media"/>
                 </div> 
+                <p>The image above shows the prototype created. There are three extruders in total, mounted atop the rods above ground. The TT motors are mounted onto the extruders to facilitate the opening mechanism for the wax to flow through. As wax is solid at room temperature and requires some
+
+                    heating to be dispensed in liquid form, the step down motors are mounted at the side to help heat the extruder to 400 fahrenheit. The prototype is then validated with different test cases to determine the feasibility of it.</p>
             </header>
             <header class="major">
-                <h4>Test cases</h4>
-                <div class="image-container">
-                    <img src="images/testcase.jpg" alt="testcase image" class="downsized-media"/>
-                </div> 
-                <div class="left-align">
-                    <p>From the above criteria set, we can see the prototype satisfies all of it, and it is ready to proceed to the next step.</p>
+                <h4>Verification test cases</h4>
+                <p>For each functionality, different test cases were made to verify said functionality</p>
+                <div class="flex-container">
+                    <div class="testcase-container">
+                        <img src="images/testcase1.jpg" alt="testcase image" />
+                    </div> 
+                    <div class="testcase-container">
+                        <img src="images/testcase2.jpg" alt="testcase image" />
+                    </div> 
                 </div>
+                <div class="flex-container">
+                    <div class="testcase-container">
+                        <img src="images/testcase3.jpg" alt="testcase image" />
+                    </div> 
+                    <div class="testcase-container">
+                        <img src="images/testcase5.jpg" alt="testcase image" />
+                    </div> 
+                </div>
+                <div class="flex-container">
+                    <div class="testcase-container">
+                        <img src="images/testcase4.jpg" alt="testcase image" />
+                    </div> 
+                    <div class="testcase-container">
+                        <img src="images/prototype output.JPG" alt="testcase image" />
+                    </div> 
+                </div>
+                <p>Through the test cases, the functionalities “print food labeling on products”, “heat edible wax into a liquid state”, “transform user input to activate the coating process”, and “move the extruder over the product” were satisfied. The functionality of extruding edible wax on product was not fully satisfied however, as the output failed to be fully coated by the edible wax as shown in the image above. The proof of concept is deemed to be a success, and is ready to proceed to the next phase.<p>
             </header>
             <header class="major">
                 <h4>Future Work</h4>
                 <div class="left-align">
-                    <p>Next steps include further testing and refinement of the prototype, user trials, and exploring additional applications of printing food labels. Phase one of this project has concluded, and we can start pitching this idea towards potential stakeholders. For the full detailed report, please refer to this <a href="sep02_report.pdf">link</a>.</p>
+                        
+                    </p> Next steps include further testing and refinement of the prototype, user trials, and exploring additional applications of printing food labels. Phase one of this project has concluded, and we can start pitching this idea towards potential stakeholders. For the full detailed report, please refer to this <a href="sep02_report.pdf">link</a>.</p>
                 </div>
             </header>
         </article>
